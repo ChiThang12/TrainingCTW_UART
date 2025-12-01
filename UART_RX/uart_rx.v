@@ -21,15 +21,14 @@ module uart_rx #(
     output wire fifo_overflow
 );
 
-    // Internal signals
+
     wire baud_tick_16x;
     wire [DATA_BITS-1:0] rx_data;
     wire rx_valid;
-    
-    // FIFO overflow detection (pulse signal)
+   
     reg fifo_overflow_pulse;
     
-    // Baud rate generator
+ 
     baud_gen #(
         .BAUD(BAUD),
         .CLOCK_FREQ(CLOCK_FREQ)
@@ -53,7 +52,7 @@ module uart_rx #(
         .rx_error(rx_error)
     );
     
-    // FIFO buffer
+
     fifo #(
         .WIDTH(DATA_BITS),
         .DEPTH(FIFO_DEPTH)

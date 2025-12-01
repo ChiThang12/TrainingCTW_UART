@@ -10,8 +10,6 @@ Dưới đây là phiên bản **được làm đẹp, rõ ràng, chuyên nghi�
 Implementation này bao gồm **đầy đủ bộ truyền (TX)** và **bộ nhận (RX)** cùng **FIFO buffer** cho khả năng truyền nhận liên tục, ổn định.
 <img width="929" height="864" alt="image" src="https://github.com/user-attachments/assets/581f7281-7d05-4729-b143-5db42ccadd46" />
 
----
-
 ## 🚀 Tính năng chính
 
 ### **UART Transmitter (TX)**
@@ -31,7 +29,6 @@ Implementation này bao gồm **đầy đủ bộ truyền (TX)** và **bộ nh�
 * Phát hiện lỗi stop bit.
 * Cảnh báo tràn FIFO khi nhận quá nhanh.
 
----
 
 ## 🏗️ Kiến trúc hệ thống
 
@@ -66,7 +63,6 @@ Hệ thống gồm 4 thành phần chính:
 * Độ sâu mặc định: **16 bytes** (configurable).
 * Tránh mất dữ liệu khi tốc độ xử lý không đều.
 
----
 ## 🔄 FSM
 
 ### **TX Flow**
@@ -76,8 +72,6 @@ Hệ thống gồm 4 thành phần chính:
 ### **RX Flow**
 <img width="1216" height="304" alt="image" src="https://github.com/user-attachments/assets/41c566f2-d825-4a92-af59-bab5e7fac2b0" />
 
-
----
 ## 🔄 Luồng hoạt động
 
 ### **TX Flow**
@@ -95,10 +89,6 @@ Hệ thống gồm 4 thành phần chính:
 4. Kiểm tra stop bit.
 5. Ghi dữ liệu vào FIFO-RX cho người dùng đọc.
 
----
-
-
-
 ## ⚙️ Đặc điểm kỹ thuật
 
 | Thông số     | Giá trị                           |
@@ -109,7 +99,6 @@ Hệ thống gồm 4 thành phần chính:
 | Oversampling | **16×**                           |
 | FIFO size    | **16 bytes** (configurable)       |
 
----
 
 ## 📡 UART Frame Format
 
@@ -123,8 +112,6 @@ Mỗi byte gồm:
 
 Với 115200 baud → thời gian truyền 1 byte ≈ **86.8 µs**.
 
----
-
 ## 🎯 Ứng dụng
 
 * Giao tiếp PC ↔ FPGA / MCU
@@ -132,6 +119,4 @@ Với 115200 baud → thời gian truyền 1 byte ≈ **86.8 µs**.
 * Debug UART cho FPGA
 * Giao tiếp sensor/actuator
 * Linh kiện trao đổi dữ liệu giữa các board điện tử
-
----
 

@@ -113,7 +113,6 @@ Mỗi byte gồm:
 Với 115200 baud → thời gian truyền 1 byte ≈ **86.8 µs**.
 
 ## 🎯 Ứng dụng
-
 * Giao tiếp PC ↔ FPGA / MCU
 * Truyền dữ liệu cho module GPS, Bluetooth, WiFi
 * Debug UART cho FPGA
